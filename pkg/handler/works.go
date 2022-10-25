@@ -27,6 +27,24 @@ type Work struct {
 }
 
 var works = []Work{{
+	ID:               5,
+	Title:            "Портфолио",
+	ShortDescription: "Моё портфолио 😅",
+	Description:      "Сайт, на котором Вы сейчас находитесь также написан мною (как ни странно 😅) на Go.",
+	Technologies:     "GO",
+	Links: []WorkLink{{
+		Title:       "Ссылка",
+		Link:        "https://iik.nalik.by/",
+		VisibleLink: "iik.nalik.by",
+		Notice:      "",
+	}, {
+		Title:       "Github",
+		Link:        "",
+		VisibleLink: "",
+		Notice:      "недоступно",
+	}},
+	Images: []int{24, 25, 26},
+}, {
 	ID:               4,
 	Title:            "Bonuses",
 	ShortDescription: "Сервис начисления бонусов по депозитам под процент в месяц.",

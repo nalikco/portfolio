@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 mx-5 gap-4 lg:grid-cols-4 lg:mx-0">
             {{ range .works }}
             <a href="/work/{{ .ID }}" class="text-white bg-black bg-opacity-40 rounded-xl backdrop-blur-xl shadow-md hover:shadow-2xl hover:backdrop-brightness-125 hover:z-50 hover:scale-110 transition-all duration-500">
-                <div class="opacity-75 font-medium text-lg text-center my-2">
+                <div class="font-medium text-lg text-center my-2">
                     {{ .Title }}
                 </div>
                 <img src="/static/img/works/{{index .Images 0 }}.png" alt="NOLIK" class="h-44 w-full">

@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/iikworks/portfolio"
-	"github.com/iikworks/portfolio/pkg/handler"
+	"github.com/iikworks/goportfolio"
+	"github.com/iikworks/goportfolio/pkg/handler"
 	"github.com/joho/godotenv"
 	"os"
 	"os/signal"
