@@ -1,0 +1,17 @@
+{{ define "contacts/list.html" }}
+    {{ template "header.html" . }}
+    <div class="container mx-auto mt-6 px-0 lg:px-10">
+        <div class="grid grid-cols-1 mx-5 gap-4 md:grid-cols-3 md:mx-0">
+            {{ range .contacts }}
+            <a href="{{ .Link }}" target="_blank" class="overflow-hidden bg-opacity-50 relative bg-black shadow-lg hover:shadow-2xl hover:backdrop-brightness-125 transition-all duration-500 ring-1 ring-black/5 rounded-xl flex items-center backdrop-blur-xl shadow-md hover:shadow-2xl hover:z-50 hover:scale-110">
+                <img class="absolute -left-4 w-24 h-24 rounded-full" src="{{ .IMGUrl }}" alt="Telegram">
+                <div class="flex flex-col py-5 pl-24">
+                    <strong class="text-white text-sm font-medium">{{ .Title }}</strong>
+                    <span class="text-slate-300 text-sm font-medium">{{ .Username }}</span>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ template "footer.html" . }}
+{{ end }}

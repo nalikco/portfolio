@@ -1,0 +1,37 @@
+{{ define "works/detail.html" }}
+    {{ template "header.html" . }}
+    <div class="container mx-auto mt-5 px-0 lg:px-10">
+        <div class="bg-black bg-opacity-70 mx-3 lg:mx-0 rounded-2xl shadow-lg text-white p-4 lg:p-10">
+            <h1 class="text-4xl uppercase font-bold">{{ .work.Title }} </h1>
+            <p class="mt-5">
+                {{ .work.Description }}
+            <div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:mx-0">
+                {{ range .work.Links }}
+                    {{ if eq .Link "" }}
+                        <div>
+                            <div class="bg-fuchsia-800 bg-opacity-50 rounded-xl py-2 flex flex-col w-full">
+                                <div class="text-center opacity-50">{{ .Title }}:</div>
+                                <div class="text-center font-medium text-red-400 -mt-1">{{ .Notice }}</div>
+                            </div>
+                        </div>
+                    {{ else }}
+                        <div>
+                            <a href="{{ .Link }}" class="bg-fuchsia-500 hover:bg-fuchsia-800 bg-opacity-50 rounded-xl py-2 flex flex-col w-full transition duration-300" target="_blank">
+                                <div class="text-center opacity-50">{{ .Title }}:</div>
+                                <div class="text-center font-medium -mt-1">{{ .VisibleLink }}</div>
+                            </a>
+                        </div>
+                    {{ end }}
+                {{ end }}
+
+            </div>
+            </p>
+            <h1 class="text-3xl my-10 text-center uppercase font-bold">Изображения</h1>
+            {{ range .work.Images }}
+                <img src="/static/img/works/{{ . }}.png" class="mt-2 rounded-xl w-2/3 mx-auto border-4 border-purple-900" alt="Изображение #{{ . }}">
+            {{ end }}
+            <a href="/" class="text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-10 justify-center font-medium text-md rounded-xl py-2 relative flex w-full hover:from-pink-500 hover:to-indigo-500">К списку работ</a>
+        </div>
+    </div>
+    {{ template "footer.html" . }}
+{{ end }}
