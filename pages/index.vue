@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Skill from "~/components/landing/skill.vue";
 import Experience from "~/components/landing/experience.vue";
+import Technology from "~/components/landing/technology.vue";
 </script>
 
 <template>
@@ -103,6 +104,67 @@ import Experience from "~/components/landing/experience.vue";
           <Experience from="April 2024"
                       company="Freelance"
                       position="Backend Laravel Developer"/>
+        </section>
+      </section>
+      <section class="py-12">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold">
+          Using Technologies
+        </h4>
+        <section class="mt-8 grid grid-cols-8 gap-8">
+          <Technology image="laravel"
+                      name="Laravel"
+                      url="https://laravel.com/"/>
+          <Technology image="phpstorm"
+                      name="PHPStorm"
+                      url="https://www.jetbrains.com/phpstorm/"/>
+          <Technology image="laravel-idea"
+                      name="Laravel Idea"
+                      url="https://laravel-idea.com/"/>
+          <Technology image="docker"
+                      name="Docker"
+                      url="https://www.docker.com/"/>
+          <Technology image="postgresql"
+                      name="PostgreSQL"
+                      url="https://www.postgresql.org/"/>
+          <Technology image="taskfile"
+                      name="Taskfile"
+                      url="https://taskfile.dev/"/>
+          <Technology image="ubuntu"
+                      name="Ubuntu"
+                      url="https://ubuntu.com/"/>
+          <Technology image="git"
+                      name="Git"
+                      url="https://git-scm.com/"/>
+          <Technology image="github"
+                      name="GitHub"
+                      url="https://github.com/"/>
+          <Technology image="gitlab"
+                      name="GitLab"
+                      url="https://gitlab.com/"/>
+          <Technology image="postman"
+                      name="Postman"
+                      url="https://www.postman.com/"/>
+          <Technology image="symfony"
+                      name="Symfony"
+                      url="https://symfony.com/"/>
+          <Technology image="mysql"
+                      name="MySQL"
+                      url="https://www.mysql.com/"/>
+          <Technology image="nodejs"
+                      name="Node.js"
+                      url="https://nodejs.org/"/>
+          <Technology image="nestjs"
+                      name="NestJS"
+                      url="https://nestjs.com/"/>
+          <Technology image="nginx"
+                      name="nginx"
+                      url="https://nginx.org/"/>
+          <Technology image="nuxt"
+                      name="Nuxt"
+                      url="https://nuxt.com/"/>
+          <Technology image="vue"
+                      name="Vue"
+                      url="https://vuejs.org/"/>
         </section>
       </section>
     </section>
