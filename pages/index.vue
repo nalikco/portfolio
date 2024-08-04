@@ -2,6 +2,11 @@
 import Skill from "~/components/landing/skill.vue";
 import Experience from "~/components/landing/experience.vue";
 import Technology from "~/components/landing/technology.vue";
+import Project from "~/components/landing/project.vue";
+import {technologies} from "~/data/technologies";
+import {projects} from "~/data/projects";
+import {skills} from "~/data/skills";
+import {experience} from "~/data/experience";
 </script>
 
 <template>
@@ -10,7 +15,7 @@ import Technology from "~/components/landing/technology.vue";
         class="h-24 fixed bg-white/30 z-50 backdrop-blur top-0 left-0 w-full bg-gradient-to-b from-white/20 to-transparent">
       <section class="mx-auto max-w-6xl h-full flex items-center justify-between">
         <NuxtLink href="/"
-                  class="text-4xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                  class="text-4xl font-bold bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
           KARPLIUK
         </NuxtLink>
       </section>
@@ -43,7 +48,7 @@ import Technology from "~/components/landing/technology.vue";
             </svg>
           </section>
           <section
-              class="z-10 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              class="z-10 bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
             <h4 class="text-5xl">Hello</h4>
             <h3 class="text-6xl">I'm Ihar Karpliuk</h3>
             <h5 class="text-4xl">Middle PHP Developer</h5>
@@ -63,108 +68,39 @@ import Technology from "~/components/landing/technology.vue";
     </section>
     <section class="max-w-6xl mx-auto">
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 to-blue-400 inline-block text-transparent bg-clip-text font-bold">
           My Skills
         </h4>
         <section class="mt-8 grid grid-cols-3 gap-8">
-          <Skill image="php"
-                 :percentage="100"
-                 name="PHP"/>
-          <Skill image="go"
-                 :percentage="80"
-                 name="Go"/>
-          <Skill image="sql"
-                 :percentage="70"
-                 name="SQL"/>
-          <Skill image="ts"
-                 :percentage="65"
-                 name="TypeScript"/>
-          <Skill image="html"
-                 :percentage="100"
-                 name="HTML"/>
-          <Skill image="css"
-                 :percentage="50"
-                 name="css"/>
+          <Skill v-for="skill in skills"
+                 :skill="skill"/>
         </section>
       </section>
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-400 to-blue-600 inline-block text-transparent bg-clip-text font-bold">
           My Experience
         </h4>
         <section class="mt-8">
-          <Experience from="August 2022"
-                      company="Freelance"
-                      position="Fullstack CodeIgniter & JS Developer"/>
-          <Experience from="October 2022"
-                      company="HMARA.IO"
-                      position="Fullstack Laravel & Vue Developer"/>
-          <Experience from="March 2023"
-                      company="Elena Osko"
-                      position="Fullstack Laravel & React Developer"/>
-          <Experience from="April 2024"
-                      company="Freelance"
-                      position="Backend Laravel Developer"/>
+          <Experience v-for="item in experience"
+                      :experience="item"/>
         </section>
       </section>
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text font-bold">
           Using Technologies
         </h4>
         <section class="mt-8 grid grid-cols-8 gap-8">
-          <Technology image="laravel"
-                      name="Laravel"
-                      url="https://laravel.com/"/>
-          <Technology image="phpstorm"
-                      name="PHPStorm"
-                      url="https://www.jetbrains.com/phpstorm/"/>
-          <Technology image="laravel-idea"
-                      name="Laravel Idea"
-                      url="https://laravel-idea.com/"/>
-          <Technology image="docker"
-                      name="Docker"
-                      url="https://www.docker.com/"/>
-          <Technology image="postgresql"
-                      name="PostgreSQL"
-                      url="https://www.postgresql.org/"/>
-          <Technology image="taskfile"
-                      name="Taskfile"
-                      url="https://taskfile.dev/"/>
-          <Technology image="ubuntu"
-                      name="Ubuntu"
-                      url="https://ubuntu.com/"/>
-          <Technology image="git"
-                      name="Git"
-                      url="https://git-scm.com/"/>
-          <Technology image="github"
-                      name="GitHub"
-                      url="https://github.com/"/>
-          <Technology image="gitlab"
-                      name="GitLab"
-                      url="https://gitlab.com/"/>
-          <Technology image="postman"
-                      name="Postman"
-                      url="https://www.postman.com/"/>
-          <Technology image="symfony"
-                      name="Symfony"
-                      url="https://symfony.com/"/>
-          <Technology image="mysql"
-                      name="MySQL"
-                      url="https://www.mysql.com/"/>
-          <Technology image="nodejs"
-                      name="Node.js"
-                      url="https://nodejs.org/"/>
-          <Technology image="nestjs"
-                      name="NestJS"
-                      url="https://nestjs.com/"/>
-          <Technology image="nginx"
-                      name="nginx"
-                      url="https://nginx.org/"/>
-          <Technology image="nuxt"
-                      name="Nuxt"
-                      url="https://nuxt.com/"/>
-          <Technology image="vue"
-                      name="Vue"
-                      url="https://vuejs.org/"/>
+          <Technology v-for="technology in technologies"
+                      :technology="technology"/>
+        </section>
+      </section>
+      <section class="py-12">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-purple-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text font-bold">
+          Projects
+        </h4>
+        <section class="mt-8 grid grid-cols-3 gap-8">
+          <Project v-for="project in projects"
+                   :project="project"/>
         </section>
       </section>
     </section>
