@@ -15,7 +15,7 @@ import {experience} from "~/data/experience";
         class="h-24 fixed bg-white/30 z-50 backdrop-blur top-0 left-0 w-full bg-gradient-to-b from-white/20 to-transparent">
       <section class="mx-auto max-w-6xl h-full flex items-center justify-between">
         <NuxtLink href="/"
-                  class="text-4xl font-bold bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
+                  class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
           KARPLIUK
         </NuxtLink>
       </section>
@@ -23,7 +23,7 @@ import {experience} from "~/data/experience";
     <section class="h-screen bg-gradient-to-b from-indigo-100 to-blue-200">
       <section class="mx-auto max-w-6xl flex flex-col justify-center h-full">
         <section
-            class="relative uppercase font-bold">
+            class="relative uppercase">
           <section class="z-0">
             <img src="/assets/img/laptop.svg"
                  class="absolute size-[500px] z-10 right-0 -top-[70%]"
@@ -48,7 +48,7 @@ import {experience} from "~/data/experience";
             </svg>
           </section>
           <section
-              class="z-10 bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
+              class="z-10 font-extrabold bg-gradient-to-r from-blue-600 via-red-400 to-indigo-400 inline-block text-transparent bg-clip-text">
             <h4 class="text-5xl">Hello</h4>
             <h3 class="text-6xl">I'm Ihar Karpliuk</h3>
             <h5 class="text-4xl">Middle PHP Developer</h5>
@@ -56,11 +56,11 @@ import {experience} from "~/data/experience";
         </section>
         <section class="mt-10 flex gap-4">
           <a href="#"
-             class="uppercase bg-blue-500 text-md font-semibold text-white rounded-lg shadow-2xl shadow-blue-400 hover:bg-blue-600 hover:shadow-sm transition py-3 px-6">
+             class="uppercase bg-blue-500 text-md font-extrabold text-white rounded-lg shadow-2xl shadow-blue-400 hover:bg-blue-600 hover:shadow-sm transition py-3 px-6">
             Hire me
           </a>
           <a href="#"
-             class="uppercase bg-transparent border-2 border-blue-500 text-md font-semibold text-blue-500 hover:bg-blue-500/10 rounded-lg shadow-2xl shadow-blue-400 hover:shadow-sm transition py-3 px-6">
+             class="uppercase bg-transparent border-2 border-blue-500 text-md font-extrabold text-blue-500 hover:bg-blue-500/10 rounded-lg shadow-2xl shadow-blue-400 hover:shadow-sm transition py-3 px-6">
             Download CV
           </a>
         </section>
@@ -68,7 +68,7 @@ import {experience} from "~/data/experience";
     </section>
     <section class="max-w-6xl mx-auto">
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 to-blue-400 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-blue-600 to-blue-400 inline-block text-transparent bg-clip-text font-extrabold">
           My Skills
         </h4>
         <section class="mt-8 grid grid-cols-3 gap-8">
@@ -77,7 +77,7 @@ import {experience} from "~/data/experience";
         </section>
       </section>
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-400 to-blue-600 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-400 to-blue-600 inline-block text-transparent bg-clip-text font-extrabold">
           My Experience
         </h4>
         <section class="mt-8">
@@ -86,7 +86,7 @@ import {experience} from "~/data/experience";
         </section>
       </section>
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text font-extrabold">
           Using Technologies
         </h4>
         <section class="mt-8 grid grid-cols-8 gap-8">
@@ -95,7 +95,7 @@ import {experience} from "~/data/experience";
         </section>
       </section>
       <section class="py-12">
-        <h4 class="text-5xl uppercase bg-gradient-to-r from-purple-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text font-bold">
+        <h4 class="text-5xl uppercase bg-gradient-to-r from-purple-600 via-red-500 to-orange-400 inline-block text-transparent bg-clip-text font-extrabold">
           Projects
         </h4>
         <section class="mt-8 grid grid-cols-3 gap-8">

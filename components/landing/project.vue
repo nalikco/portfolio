@@ -28,7 +28,7 @@ const projectsImages = Object.fromEntries(
         :title="props.project.name"
         :alt="props.project.name">
     <section class="py-6 px-6">
-      <h2 class="text-xl font-bold uppercase text-center">{{ props.project.name }}</h2>
+      <h2 class="text-xl font-extrabold uppercase text-center">{{ props.project.name }}</h2>
       <p class="mt-3">{{ props.project.shortDescription }}</p>
     </section>
   </div>
